@@ -1,0 +1,138 @@
+.footerBanner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8%;
+    background-color: #D9D9D9;
+    width: 100%;
+}
+
+.firstFlex{
+    margin-top: 5%;
+    margin-left:3%;
+}
+
+.badges{
+    margin-top:6%;
+}
+
+.firstFlex p{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    color:black;
+    line-height: 10px;
+}
+
+.secondFlex{
+    position: relative;
+    margin-top: 4%;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: left;
+    color: #03081F;
+}
+
+.input{
+    padding: 13px;
+    border-radius:100px;
+    width: 260px;
+    border:none;
+    background-color: #cacaca;
+}
+
+.button{
+    position: absolute;
+    top:76px;
+    right:0px;
+    padding: 7px;
+    border-radius:100px;
+    width: 120px;
+    border:none;
+    background-color: #FC8A06;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    color:white;
+}
+
+.spam{
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.spam a{
+    color: black;
+}
+
+.social{
+    display:flex;
+    justify-content: space-around;
+}
+
+.thirdFlex,.fourthFlex{
+    margin-top:4%;
+}
+
+.thirdFlex h1,.fourthFlex h1{
+    color: #03081F;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: left;
+}
+
+.thirdFlex li a,.fourthFlex li a {
+    color: black;
+    text-decoration: underline;
+}
+
+.thirdFlex li ,.fourthFlex li{
+    list-style: none;
+    margin-top: 8px;
+    margin-left: -40px;
+}
+
+.fourthFlex{
+    margin-right: 3%;
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+    .footerBanner {
+        margin-top: -45%;
+      display: flex;
+      flex-direction: column; 
+    }
+    .social{
+        justify-content:center;
+    }
+    .thirdFlex,.fourthFlex{
+        margin-left:8%;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 600px) {
+    .footerBanner{
+        margin-top: -15%;
+    }
+  }
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .footerBanner{
+        margin-top: -30%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .footerBanner{
+        margin-top: -4%;
+    }
+}

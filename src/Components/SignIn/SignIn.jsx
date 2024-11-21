@@ -1,6 +1,6 @@
 import React from 'react'
-import Styles from './SignUp.module.css'
-export default function SignUp() {
+import Styles from './SignIn.module.css'
+export default function SignIn() {
   return (
     <div>
       <div className={Styles.mainBanner}>
@@ -9,8 +9,8 @@ export default function SignUp() {
           <div className={Styles.secImg}><img src="Hand.png" alt="hand_image"/></div>
           <p>Today is a new day. It's your day. You shape it. 
           <h1>Sign in to start ordering.</h1></p>
-          <div className={Styles.emailContainer}>
-          <label for="email" className={Styles.emailLabel}>Email</label>
+          <div className={Styles.inputContainer}>
+          <label for="email" className={Styles.inputLabel}>Email</label>
           <input 
           type="email" 
           id="email" 
@@ -19,8 +19,8 @@ export default function SignUp() {
           class={Styles.emailInput} 
           />
           </div>
-          <div className={Styles.passwordContainer}>
-          <label for="password" className={Styles.passwordLabel}>Email</label>
+          <div className={Styles.inputContainer}>
+          <label for="password" className={Styles.inputLabel}>Email</label>
           <input 
           type="password" 
           id="password" 
@@ -33,6 +33,9 @@ export default function SignUp() {
           <h1>Forgot Password?</h1>
           </div>
           <button>Sign In</button>
+          <div className={Styles.signup}>
+          <h1>Don't you have an account? <a>Sign up</a></h1>
+          </div>
         </div>
         <div className={Styles.bannerTwo}>
         <img src="Art.svg" alt="art_image"/>

@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import SignUp from './Components/SignUp.jsx'
+import SignInPage from './Pages/SignInPage.jsx';
+import SignUpPage from './Pages/SignUpPage.jsx';
+
 function App() {
   return (
    <>
-   <SignUp/>
+   {/* <SignInPage/> */}
+   <SignUpPage/>
    </>
   );
 }

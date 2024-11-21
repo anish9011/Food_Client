@@ -9,7 +9,7 @@
   
 
   .bannerOne {
-    margin-left: 25%;
+    margin-left: 30%;
     margin-top: 10%;
   }
 
@@ -35,7 +35,7 @@
     text-align: left;
 }
 
-.emailContainer ,.passwordContainer{
+.inputContainer {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -49,34 +49,47 @@
   }
   
 
-  .emailLabel,.passwordLabel {
+  .inputLabel {
     margin-bottom: 0.5rem;
     font-size: 1rem; 
     color: #333; 
   }
 
-  .emailInput, .passwordInput {
-    width: 70%; 
+  .emailInput, .passwordInput ,.nameInput, .phoneInput {
+    width: 75%; 
     padding: 0.7rem; 
     border: 1px solid #00000066;
     border-radius: 100px;
     font-size: 1rem;
   }
+
+  .signin h1 {
+    margin-right:8em;
+    display: flex;
+    align-items: center; /* Align text and link vertically in the center */
+    flex-wrap: wrap; /* Wrap content if it overflows */
+    gap: 0.5rem; /* Add space between the text and the link */
+  }
   
- .forgotPassword h1{
+  .signin a {
     color: #FC8A06;
-    font-family: Poppins;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    text-align: right;
-    margin-right:35%;
-    margin-top:7%;
- }
+    text-decoration: none;
+    cursor: pointer; /* Add a pointer cursor for the link */
+  }
   
+  .signin a:hover {
+    text-decoration: underline;
+  }
+  
+  .signin a:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+  
+
 .bannerOne button{
-    width: 103%; 
+    width: 109%; 
     padding: 12px 0px 12px 0px;
     gap: 0px;
     border-radius: 100px;
@@ -95,7 +108,7 @@
 
   .bannerTwo img {
     max-width: 80%;
-    margin-left: 10%;
+    margin-left: 5%;
     display: block; 
     max-height: 200%;
     padding: 20px;
@@ -103,8 +116,25 @@
     border-radius: 8px;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 600px) {
   .bannerTwo {
-    display: none; /* Hides the bannerTwo element on screens smaller than 768px */
+    display: none; 
+  }
+  .bannerOne {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: start; /* Center content vertically within bannerOne */
+    align-items: center; /* Center content horizontally within bannerOne */
+    text-align: center; /* Ensure text is centered */
+    margin-top: 0em;
+  }
+  .emailInput, .passwordInput ,.nameInput, .phoneInput {
+    width: 20em; 
+    padding: 0.7rem; 
+    border: 1px solid #00000066;
+    border-radius: 100px;
+    font-size: 1rem;
   }
 }
+
+
