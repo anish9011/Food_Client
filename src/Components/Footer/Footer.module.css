@@ -113,8 +113,11 @@
     .social{
         justify-content:center;
     }
-    .thirdFlex,.fourthFlex{
+    .firstFlex,.secondFlex, .thirdFlex,.fourthFlex{
         margin-left:8%;
+    }
+    .secondFlex button{
+        margin-right: 30%;
     }
   }
   

@@ -1,0 +1,129 @@
+.mainHeader {
+    margin: 2% 12%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainImage img {
+    height: 40px;
+}
+
+.title {
+    display: flex;
+    gap: 20px;
+}
+
+.title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    margin: 0;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.title h1:hover {
+    color: #FC8A06;
+}
+
+.title h1.active {
+    color: white;
+    background-color: #FC8A06;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #03081F;
+    border-radius: 35px;
+    padding: 5px 10px;
+}
+
+.profile img {
+    height: 30px;
+}
+
+.profile h1 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.secHeader {
+    margin: 2% auto;
+    background: linear-gradient(
+        rgba(3, 8, 31, 0.9),
+        rgba(3, 8, 31, 0.9)
+    ),
+    url('../../Assets/Rectangle 44.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    width: 80%;
+    height: 500px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.secHeader h1 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    color: white;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.McD h1 {
+    margin-top: 0;
+    color: white;
+    font-family: Poppins;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+}
+
+.imgOne, .imgTwo {
+    position: absolute;
+    top: 80%;
+    left: 6%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translate(0, -50%);
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    padding: 5px 15px;
+}
+
+.imgTwo{
+    left:25%;
+}
+
+.imgOne img, .imgTwo img {
+    width: 30px;
+    height: auto;
+}
+
+.imgOne h1, .imgTwo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: white;
+    margin: 0;
+}

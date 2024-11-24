@@ -63,6 +63,12 @@
     font-size: 1rem;
   }
 
+  .signin {
+    text-align: left;
+    margin-left: -17%;
+    margin-top: 20px;
+  }
+
   .signin h1 {
     margin-right:8em;
     display: flex;
@@ -134,6 +140,14 @@
     border: 1px solid #00000066;
     border-radius: 100px;
     font-size: 1rem;
+    margin-left: 13%;
+  }
+  .inputLabel{
+    margin-left: 13%;
+  }
+  .signin{
+    margin-left: -13%;
+    margin-top: 20px;
   }
 }
 

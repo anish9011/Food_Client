@@ -1,0 +1,162 @@
+/* Default Styles (for large screens) */
+.mainBanner {
+    background-color: #FAFAFA;
+    width: 90%; /* Adjusted for better responsiveness */
+    max-width: 1528px;
+    height: 70px;
+    margin: 0 auto; /* Center the banner horizontally */
+    border-radius: 0px 0px 12px 12px;
+    border-top: 1px solid #ccc; /* Fix border shorthand */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space elements evenly */
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+.mainBanner img {
+    height: 50%;
+}
+
+.mainBanner h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22.5px;
+    text-align: left;
+    margin: 0 20px; /* Spacing between text and adjacent elements */
+    margin-right: 10%;
+    white-space: nowrap;
+}
+
+.mainBanner span {
+    color: #FC8A06;
+    text-decoration: underline;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between location elements */
+    flex-grow: 1; /* Allow this section to take remaining space */
+    justify-content: flex-start; /* Align the content to the left */
+}
+
+.location h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left; /* Align text to the left */
+    margin: 0;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.location span {
+    color: #FC8A06;
+    text-decoration: underline;
+    margin-left: 5px; /* Add slight margin for better spacing */
+}
+
+.greenBox {
+    display: flex;
+    align-items: center; /* Vertically align all boxes */
+    justify-content: space-between; /* Distribute boxes evenly */
+    padding: 5px 20px; /* Add padding around the container */
+    background-color: #028643; /* Green background */
+    border-radius: 8px; /* Rounded corners */
+    color: white;
+    margin: 0 auto; /* Center the container horizontally */
+    width: 20%; /* Make the container take full width */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.boxOne {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    gap: 10px; /* Space between the image and text */
+    padding: 14px;
+    flex-grow: 0; /* Prevent boxOne from growing */
+    flex-basis: 35%; /* Set a fixed base width */
+    border-right: 2px solid white; /* Border-right for separation */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.boxOne h1 {
+    font-size: 14px; /* Adjust font size if needed */
+    font-weight: 500;
+    margin: 0;
+}
+
+.boxOne img {
+    height: 30px; /* Adjust the image size to fit better */
+}
+
+.boxTwo {
+    flex-grow: 0; /* Prevent boxTwo from growing */
+    width: 50px; /* Set a small width for boxTwo */
+    background-color: white; /* White gap */
+    height: 100%; /* Full height of the green box */
+    border-right: 2px solid white; /* Border-right for separation */
+}
+
+.boxThree {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-left: 2px solid white;
+    padding: 12px;
+    margin-left: 20px; /* Space between boxTwo and boxThree */
+}
+
+.boxThree img {
+    max-height: 35px; /* Adjust the image size for better fit */
+}
+
+/* Medium Screen (Tablets and smaller laptops) */
+@media screen and (max-width: 768px) {
+    .mainBanner {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        height: auto; /* Adjust the height to content */
+        padding: 10px;
+    }
+
+    .mainBanner h1 {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        margin-right: 0;
+        margin-bottom: 10px; /* Add space below the text */
+    }
+    .mainBanner span{
+        display: inline-block;
+    }
+    .location {
+        flex-direction: column; /* Stack location text and image vertically */
+        text-align: center;
+    }
+
+    .location h1 {
+        font-size: 14px; /* Smaller font for location */
+    }
+
+    .greenBox {
+        margin-left: 0; /* Remove the left margin */
+        flex-direction: column; /* Stack the boxes vertically */
+        align-items: center; /* Center align boxes */
+        padding: 10px 20px;
+    }
+
+    .boxOne, .boxTwo, .boxThree {
+        width: 100%; /* Make each box take full width */
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+
+    .boxThree {
+        margin-left: 0; /* Remove left margin for small screens */
+        border-left: none; /* Remove border on the left for small screens */
+    }
+
+    .boxThree img {
+        max-height: 30px; /* Smaller image for smaller screens */
+    }
+}
+
