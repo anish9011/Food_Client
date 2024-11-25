@@ -5,15 +5,14 @@ import SignUpPage from './Pages/SignUpPage.jsx';
 import Home from './Pages/Home.jsx';
 import { TokenProvider } from './Context/TokenContext'; // Import TokenProvider
 import ProtectedRoute from './ProtectedRoutes/ProtectedRoutes.js'; // Import ProtectedRoute
-
+import Demo from'./Components/Demo.jsx';
 function App() {
   return (
     <Router>
       <TokenProvider> {/* Wrap everything inside TokenProvider to access context */}
         <Routes>
-          <Route path="/" element={<SignInPage />} />
+          <Route path="/" element={<SignInPage/>} />
           <Route path="/signup" element={<SignUpPage />} />
-
           <Route 
             path="/home" 
             element={
