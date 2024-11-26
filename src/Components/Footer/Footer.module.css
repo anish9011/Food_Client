@@ -139,3 +139,28 @@
         margin-top: -4%;
     }
 }
+
+.content{
+    background-color: #03081F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.content h1{
+    color:white;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+}
+
+.flexTwo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+}
+

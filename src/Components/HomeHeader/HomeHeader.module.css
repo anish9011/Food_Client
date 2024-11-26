@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Positioning context for children */
+    margin: 2% 12%;
+}
+
+.mainImage {
+    height: 100px; /* Define explicit height for proper percentage calculation */
+    width: 100%; /* Define width relative to the parent (e.g., .mainHeader) */
+}
+
+.mainImage img {
+    height: 40px;
+    position: absolute; /* Relative to .mainImage */
+    top: -6%; /* Adjust the vertical position using percentage */
+    left: -60%; /* Adjust the horizontal position using percentage */
+}
+.mainImage{
+    position: absolute;
+    top:30%;
+    left:60%;
+}
+
+
+.title {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the title items */
+    flex-grow: 1; /* Title takes up available space */
+    align-items: center;
+}
+
+.title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    margin: 0;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.title h1:hover {
+    color: #FC8A06;
+}
+
+.title h1.active {
+    color: white;
+    background-color: #FC8A06;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #03081F;
+    border-radius: 35px;
+    padding: 5px 10px;
+}
+
+.profile img {
+    height: 30px;
+}
+
+.profile h1 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.container{
+    background-color: #FBFBFB;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap:10px;
+}
+
+.firstContainer{
+    position: relative;
+    margin-left: 2%;
+}
+
+.firstContainer p{
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    color: #03081F;
+}
+
+.firstContainer h1{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+    color: #03081F;
+}
+
+.firstContainer h2{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 66px;
+    text-align: left;
+    color: #FC8A06;
+}
+
+.firstContainer h3{
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 66px;
+    text-align: left;
+    color: #03081F;
+}
+
+.firstContainer input{
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #00000066;
+        border-radius: 100px;
+        outline: none;
+        width: 80%;
+}
+
+.firstContainer button {
+    background-color: #FC8A06;
+    border: none;
+    width: 30%;
+    height: 40px; 
+    border-radius: 100px; 
+    font-size: 16px; 
+    position: absolute;
+    right: 20%;
+}
+
+.secondContainer{
+    position: relative;
+}
+
+.orangeImage{
+    width: 300px;
+    height: 500px;
+    margin-left: -102%;
+}
+
+.loodlesImage{
+    position: absolute;
+    top:31.5%;
+    left:-105%;
+}
+
+.loodlesImage img{
+    width: 300px;
+}
+
+.eatingImage{
+    position: absolute;
+    top:23.5%;
+    left: -230%;
+}
+
+.eatingImage img{
+    width: 600px;
+}
+
+.floatImage1{
+    position: absolute;
+    top:20%;
+    left:-50%;
+}
+.floatImage2{
+    position: absolute;
+    top:43%;
+    left:-35%;
+}
+.floatImage3{
+    position: absolute;
+    top:65%;
+    left:-40%;
+}
+
+.floatImage1 img,.floatImage2 img, .floatImage3 img{
+    width:300px;
+}

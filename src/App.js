@@ -2,10 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignInPage from './Pages/SignInPage.jsx';
 import SignUpPage from './Pages/SignUpPage.jsx';
-import Home from './Pages/Home.jsx';
+import ProductPage from './Pages/ProductPage.jsx';
 import { TokenProvider } from './Context/TokenContext'; // Import TokenProvider
 import ProtectedRoute from './ProtectedRoutes/ProtectedRoutes.js'; // Import ProtectedRoute
 import Demo from'./Components/Demo.jsx';
+import HomePage from './Pages/HomePage.jsx';
 function App() {
   return (
     <Router>
@@ -14,10 +15,18 @@ function App() {
           <Route path="/" element={<SignInPage/>} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route 
-            path="/home" 
+            path="/homepage" 
             element={
               <ProtectedRoute>
-                <Home /> 
+                <HomePage/> 
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/productpage" 
+            element={
+              <ProtectedRoute>
+                <ProductPage /> 
               </ProtectedRoute>
             } 
           />

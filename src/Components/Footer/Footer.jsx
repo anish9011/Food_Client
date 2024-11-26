@@ -47,6 +47,17 @@ export default function Footer() {
             </ul>
         </div>
       </div>
+      <div className={Styles.content}>
+        <div className={Styles.flexOne}>
+          <h1>Order.uk Copyright 2024, All Rights Reserved.</h1>
+        </div>
+        <div className={Styles.flexTwo}>
+          <h1>Privacy Policy </h1>         
+          <h1>Terms</h1>          
+          <h1>Pricing</h1>           
+          <h1>Do not sell or share my personal information</h1>
+        </div>
+      </div>
     </>
   )
 }

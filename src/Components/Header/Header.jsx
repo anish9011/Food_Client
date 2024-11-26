@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Styles from './Header.module.css';
 
 export default function Header() {
-  const [active, setActive] = useState('Home'); // State to track the active item
+  const [active, setActive] = useState('Restaurants'); // State to track the active item
   const [burgerImages, setBurgerImages] = useState([]);  // State for burger images
   const [friesImages, setFriesImages] = useState([]);    // State for fries images
   const [coldImages, setColdImages] = useState([]);      // State for cold drinks images
   const [searchTerm, setSearchTerm] = useState('');      // State to store the search term
+  const navigate = useNavigate(); // Initialize the navigate function
 
   // Fetch images from backend
   useEffect(() => {
@@ -41,28 +43,37 @@ export default function Header() {
     image.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const handleNavigation = (item) => {
+    setActive('Restaurants'); // Always set "Restaurants" as active
+    
+    if (item === 'Home') {
+        navigate('/homepage', { state: { selectedRestaurant: item } }); // Pass the selected restaurant as state
+    }
+};
+
   return (
     <>
-      <div className={Styles.mainHeader}>
-        <div className={Styles.mainImage}>
-          <img src="LOGO 1.svg" alt="header_logo" />
+       <div className={Styles.mainHeader}>
+            <div className={Styles.mainImage}>
+                <img src="LOGO 1.svg" alt="header_logo" />
+            </div>
+            <div className={Styles.title}>
+                {['Home', 'Special Offers', 'Restaurants', 'Track Order'].map((item) => (
+                    <h1
+                        key={item}
+                        className={active === item ? Styles.active : ''}
+                        onClick={() => handleNavigation(item)} // Use handleNavigation
+                    >
+                        {item}
+                    </h1>
+                ))}
+            </div>
+            <div className={Styles.profile}>
+                <img src="male.svg" alt="male_logo" />
+                <h1>Hey Mike</h1>
+            </div>
         </div>
-        <div className={Styles.title}>
-          {['Home', 'Special Offers', 'Restaurants', 'Track Order'].map((item) => (
-            <h1
-              key={item}
-              className={active === item ? Styles.active : ''}
-              onClick={() => setActive(item)}
-            >
-              {item}
-            </h1>
-          ))}
-        </div>
-        <div className={Styles.profile}>
-          <img src="male.svg" alt="male_logo" />
-          <h1>Hey Mike</h1>
-        </div>
-      </div>
+
 
       <div className={Styles.secHeader}>
         <h1>I'm lovin' it!</h1>
