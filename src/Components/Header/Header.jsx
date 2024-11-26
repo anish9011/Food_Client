@@ -5,7 +5,8 @@ export default function Header() {
   const [active, setActive] = useState('Home'); // State to track the active item
   const [burgerImages, setBurgerImages] = useState([]);  // State for burger images
   const [friesImages, setFriesImages] = useState([]);    // State for fries images
-  const [coldImages, setColdImages] = useState([]);    // State for fries images
+  const [coldImages, setColdImages] = useState([]);      // State for cold drinks images
+  const [searchTerm, setSearchTerm] = useState('');      // State to store the search term
 
   // Fetch images from backend
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function Header() {
         if (data.success) {
           setBurgerImages(data.burgerImages);  // Set burger images
           setFriesImages(data.friesImages);    // Set fries images
-          setColdImages(data.coldImages);
+          setColdImages(data.coldImages);      // Set cold drink images
         } else {
           console.error('Failed to fetch images:', data.message);
         }
@@ -28,6 +29,17 @@ export default function Header() {
 
     fetchImages();
   }, []);
+
+  // Filter the images based on the search term
+  const filteredBurgers = burgerImages.filter(image =>
+    image.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const filteredFries = friesImages.filter(image =>
+    image.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const filteredColdDrinks = coldImages.filter(image =>
+    image.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <>
@@ -61,10 +73,10 @@ export default function Header() {
           <img
             src="https://res.cloudinary.com/dnsl58bbi/image/upload/v1732528431/your-folder-name/cg4jczbauvfoggt2ug4s.svg"
             alt="rectangle_image"
-            />
-              <div className={Styles.mainBannerStar}>
-                <img src="Rectangle 64.svg" alt="rectangle_image" />
-              </div>
+          />
+          <div className={Styles.mainBannerStar}>
+            <img src="Rectangle 64.svg" alt="rectangle_image" />
+          </div>
         </div>
         <div className={Styles.imgOne}>
           <img src="OrderCompleted.svg" alt="orderCompleted" />
@@ -88,6 +100,8 @@ export default function Header() {
             type="text"
             placeholder="Search from menu..."
             className={Styles.searchInput}
+            value={searchTerm} // Controlled input
+            onChange={(e) => setSearchTerm(e.target.value)} // Update searchTerm on input change
           />
         </div>
       </div>
@@ -130,78 +144,90 @@ export default function Header() {
         />
       </div>
 
-      {/* Render images dynamically */}
       <div className={Styles.foodSection}>
-        <div className={Styles.burgerSection}>
-        <h1>Burgers</h1>
-        <div className={Styles.foods}>
-          {burgerImages.map((image) => (
-            <div key={image.id} className={Styles.foodItem}>
-              <div>
-                <h1>{image.name}</h1>
-                <h2>{image.about}</h2>
-                <p>&#8377;{image.price} </p>
-              </div>
-              <div className={Styles.image}>
-                <img src={image.imageUrl} alt={image.name} />
-                <div className={Styles.addButton}>
-                  <img src="Rectangle 47.svg" alt="addtocart_image"/>
-                  <div className={Styles.innerbtn}>
-                    <img src="Plus.svg" alt="addtocart_image"/>
+        {/* Render Burger Section only if there are matching items */}
+        {filteredBurgers.length > 0 && (
+          <div className={Styles.burgerSection}>
+            <h1>Burgers</h1>
+            <div className={Styles.foods}>
+              {filteredBurgers.map((image) => (
+                <div key={image.id} className={Styles.foodItem}>
+                  <div>
+                    <h1>{image.name}</h1>
+                    <h2>{image.about}</h2>
+                    <p>&#8377;{image.price}</p>
+                  </div>
+                  <div className={Styles.image}>
+                    <img src={image.imageUrl} alt={image.name} />
+                    <div className={Styles.addButton}>
+                      <img src="Rectangle 47.svg" alt="addtocart_image" />
+                      <div className={Styles.innerbtn}>
+                        <img src="Plus.svg" alt="addtocart_image" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-        </div>
-        <div className={Styles.friesSection}>
-        <h1>Fries</h1>
-        <div className={Styles.foods}>
-          {friesImages.map((image) => (
-            <div key={image.id} className={Styles.foodItem}>
-              <div>
-                <h1>{image.name}</h1>
-                <h2>{image.about}</h2>
-                <p>&#8377;{image.price} </p>
-              </div>
-              <div className={Styles.image}>
-                <img src={image.imageUrl} alt={image.name} />
-                <div className={Styles.addButton}>
-                  <img src="Rectangle 47.svg" alt="addtocart_image"/>
-                  <div className={Styles.innerbtn}>
-                    <img src="Plus.svg" alt="addtocart_image"/>
+          </div>
+        )}
+
+        {/* Render Fries Section only if there are matching items */}
+        {filteredFries.length > 0 && (
+          <div className={Styles.friesSection}>
+            <h1>Fries</h1>
+            <div className={Styles.foods}>
+              {filteredFries.map((image) => (
+                <div key={image.id} className={Styles.foodItem}>
+                  <div>
+                    <h1>{image.name}</h1>
+                    <h2>{image.about}</h2>
+                    <p>&#8377;{image.price}</p>
+                  </div>
+                  <div className={Styles.image}>
+                    <img src={image.imageUrl} alt={image.name} />
+                    <div className={Styles.addButton}>
+                      <img src="Rectangle 47.svg" alt="addtocart_image" />
+                      <div className={Styles.innerbtn}>
+                        <img src="Plus.svg" alt="addtocart_image" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-        </div>
-        <div className={Styles.friesSection}>
-        <h1>Cold Drinks</h1>
-        <div className={Styles.foods}>
-          {coldImages.map((image) => (
-            <div key={image.id} className={Styles.foodItem}>
-              <div>
-                <h1>{image.name}</h1>
-                <h2>{image.about}</h2>
-                <p>&#8377;{image.price} </p>
-              </div>
-              <div className={Styles.image}>
-                <img src={image.imageUrl} alt={image.name} />
-                <div className={Styles.addButton}>
-                  <img src="Rectangle 47.svg" alt="addtocart_image"/>
-                  <div className={Styles.innerbtn}>
-                    <img src="Plus.svg" alt="addtocart_image"/>
+          </div>
+        )}
+
+        {/* Render Cold Drinks Section only if there are matching items */}
+        {filteredColdDrinks.length > 0 && (
+          <div className={Styles.coldSection}>
+            <h1>Cold Drinks</h1>
+            <div className={Styles.foods}>
+              {filteredColdDrinks.map((image) => (
+                <div key={image.id} className={Styles.foodItem}>
+                  <div>
+                    <h1>{image.name}</h1>
+                    <h2>{image.about}</h2>
+                    <p>&#8377;{image.price}</p>
+                  </div>
+                  <div className={Styles.image}>
+                    <img src={image.imageUrl} alt={image.name} />
+                    <div className={Styles.addButton}>
+                      <img src="Rectangle 47.svg" alt="addtocart_image" />
+                      <div className={Styles.innerbtn}>
+                        <img src="Plus.svg" alt="addtocart_image" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-        </div>
+          </div>
+        )}
       </div>
+
+
     </>
   );
 }
