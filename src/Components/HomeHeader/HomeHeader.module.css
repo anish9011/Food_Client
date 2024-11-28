@@ -5,27 +5,27 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 .mainHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Positioning context for children */
+    position: relative;
     margin: 2% 12%;
 }
 
 .mainImage {
-    height: 100px; /* Define explicit height for proper percentage calculation */
-    width: 100%; /* Define width relative to the parent (e.g., .mainHeader) */
+    height: 100px;
+    width: 100%;
 }
 
 .mainImage img {
-    height: 40px;
-    position: absolute; /* Relative to .mainImage */
-    top: -6%; /* Adjust the vertical position using percentage */
-    left: -60%; /* Adjust the horizontal position using percentage */
+    height: 30px;
+    position: absolute;
+    top: -6%; 
+    left: -60%;
 }
 .mainImage{
     position: absolute;
@@ -37,14 +37,15 @@ html, body {
 .title {
     display: flex;
     gap: 20px;
-    justify-content: center; /* Center the title items */
-    flex-grow: 1; /* Title takes up available space */
+    justify-content: center; 
+    flex-grow: 1; 
     align-items: center;
+    margin-left: 10%;
 }
 
 .title h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 27px;
     text-align: center;
@@ -93,7 +94,7 @@ html, body {
     padding: 1%;
     margin-left: 10%;
     margin-right: 10%;
-    gap:10px;
+    gap:3%;
 }
 
 .firstContainer{
@@ -112,7 +113,7 @@ html, body {
 
 .firstContainer h1{
     font-family: Poppins;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 66px;
     text-align: left;
@@ -121,7 +122,7 @@ html, body {
 
 .firstContainer h2{
     font-family: Poppins;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 66px;
     text-align: left;
@@ -138,8 +139,8 @@ html, body {
 }
 
 .firstContainer input{
-        padding: 10px;
-        font-size: 16px;
+        padding: 7px;
+        font-size: 12px;
         border: 1px solid #00000066;
         border-radius: 100px;
         outline: none;
@@ -150,7 +151,7 @@ html, body {
     background-color: #FC8A06;
     border: none;
     width: 30%;
-    height: 40px; 
+    height: 30px; 
     border-radius: 100px; 
     font-size: 16px; 
     position: absolute;
@@ -161,48 +162,57 @@ html, body {
     position: relative;
 }
 
-.orangeImage{
+.orangeImage {
+    margin-top: 5%;
     width: 300px;
-    height: 500px;
-    margin-left: -102%;
+    height: auto; 
+    margin-left: 0;
 }
+
+.orangeImage img {
+    display: block; 
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; 
+}
+
 
 .loodlesImage{
     position: absolute;
-    top:31.5%;
-    left:-105%;
+    top:22%;
+    left:-20%;
 }
 
 .loodlesImage img{
-    width: 300px;
+    width: 190px;
 }
 
 .eatingImage{
     position: absolute;
-    top:23.5%;
-    left: -230%;
+    top: 11.5%;
+    left: -90%;
 }
 
 .eatingImage img{
-    width: 600px;
+    width: 390px;
 }
 
 .floatImage1{
     position: absolute;
-    top:20%;
-    left:-50%;
+    top:5%;
+    left:12%;
 }
 .floatImage2{
     position: absolute;
-    top:43%;
-    left:-35%;
+    top:32%;
+    left:25%;
 }
 .floatImage3{
     position: absolute;
-    top:65%;
-    left:-40%;
+    top:58%;
+    left:15%;
 }
 
 .floatImage1 img,.floatImage2 img, .floatImage3 img{
-    width:300px;
+    width:220px;
 }

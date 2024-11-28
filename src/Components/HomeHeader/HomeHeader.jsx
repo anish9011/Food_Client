@@ -14,7 +14,7 @@ export default function HomeHeader() {
         }
 
         if (item === 'Restaurants') {
-            navigate('/productpage', { state: { selectedRestaurant: item } }); // Pass the selected restaurant as state
+            navigate('/productpage/McDonalds', { state: { selectedRestaurant: item } }); // Pass the selected restaurant as state
         }
     };
 
@@ -55,7 +55,7 @@ export default function HomeHeader() {
             </div>
             <div className={Styles.secondContainer}>
                 <div className={Styles.orangeImage}>
-                    <img src="image 1.svg" alt="orange_image"/>
+                    <img src="orange.png" alt="orange_image"/>
                 </div>
                 <div className={Styles.loodlesImage}>
                 <img src="Loodles.svg" alt="loodles_image"/>

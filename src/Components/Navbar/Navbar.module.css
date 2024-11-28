@@ -1,16 +1,21 @@
-/* Default Styles (for large screens) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .mainBanner {
     background-color: #FAFAFA;
-    width: 90%; /* Adjusted for better responsiveness */
+    width: 90%; 
     max-width: 1528px;
     height: 70px;
-    margin: 0 auto; /* Center the banner horizontally */
+    margin: 0 auto;
     border-radius: 0px 0px 12px 12px;
-    border-top: 1px solid #ccc; /* Fix border shorthand */
+    border-top: 1px solid #ccc; 
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Space elements evenly */
-    padding: 0 20px; /* Add padding for better spacing */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; 
 }
 
 .mainBanner img {
@@ -19,7 +24,7 @@
 
 .mainBanner h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 22.5px;
     text-align: left;
@@ -41,12 +46,17 @@
     justify-content: flex-start; /* Align the content to the left */
 }
 
+.location img{
+    margin-left: -10%;
+}
+
 .location h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     text-align: left; /* Align text to the left */
     margin: 0;
+    margin-left: 1%;
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
@@ -65,8 +75,9 @@
     border-radius: 8px; /* Rounded corners */
     color: white;
     margin: 0 auto; /* Center the container horizontally */
-    width: 20%; /* Make the container take full width */
+    width: 30%; /* Make the container take full width */
     box-sizing: border-box; /* Ensure padding doesn't overflow */
+    margin-left: -2%;
 }
 
 .boxOne {
@@ -91,11 +102,11 @@
 }
 
 .boxTwo {
-    flex-grow: 0; /* Prevent boxTwo from growing */
-    width: 50px; /* Set a small width for boxTwo */
-    background-color: white; /* White gap */
-    height: 100%; /* Full height of the green box */
-    border-right: 2px solid white; /* Border-right for separation */
+    flex-grow: 1; 
+    width: 50px; 
+    background-color: white; 
+    height: 100%; 
+    border-right: 2px solid white; 
 }
 
 .boxThree {
@@ -104,13 +115,23 @@
     align-items: center; /* Center content vertically */
     border-left: 2px solid white;
     padding: 12px;
-    margin-left: 20px; /* Space between boxTwo and boxThree */
+    margin-left: 25px; /* Space between boxTwo and boxThree */
 }
 
 .boxThree img {
     max-height: 35px; /* Adjust the image size for better fit */
 }
 
+
+.imageContainer {
+    text-align: center; /* Center-aligns the image */
+  }
+  
+  .imageContainer img {
+    width: 30px; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+  }
+  
 /* Medium Screen (Tablets and smaller laptops) */
 @media screen and (max-width: 768px) {
     .mainBanner {

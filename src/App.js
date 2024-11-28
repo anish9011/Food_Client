@@ -4,8 +4,8 @@ import SignInPage from './Pages/SignInPage.jsx';
 import SignUpPage from './Pages/SignUpPage.jsx';
 import ProductPage from './Pages/ProductPage.jsx';
 import { TokenProvider } from './Context/TokenContext'; // Import TokenProvider
-import ProtectedRoute from './ProtectedRoutes/ProtectedRoutes.js'; // Import ProtectedRoute
-import Demo from'./Components/Demo.jsx';
+// import ProtectedRoute from './ProtectedRoutes/ProtectedRoutes.js'; // Import ProtectedRoute
+// import Demo from'./Components/Demo.jsx';
 import HomePage from './Pages/HomePage.jsx';
 function App() {
   return (
@@ -14,7 +14,11 @@ function App() {
         <Routes>
           <Route path="/" element={<SignInPage/>} />
           <Route path="/signup" element={<SignUpPage />} />
-          <Route 
+          <Route path="/homepage" element={<HomePage/>} />
+          <Route path="/productpage/:restaurantName" element={<ProductPage />} />
+          <Route path="/productpage" element={<ProductPage />} />
+
+          {/* <Route 
             path="/homepage" 
             element={
               <ProtectedRoute>
@@ -23,13 +27,13 @@ function App() {
             } 
           />
           <Route 
-            path="/productpage" 
+            path="/productpage/:restaurantName" 
             element={
               <ProtectedRoute>
                 <ProductPage /> 
               </ProtectedRoute>
             } 
-          />
+          /> */}
         </Routes>
       </TokenProvider>
     </Router>

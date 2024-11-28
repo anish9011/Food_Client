@@ -1,6 +1,8 @@
 .container{
 background-color: white;
-padding:5%;
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 4%;
 }
 
 .flexBox {
@@ -17,5 +19,5 @@ padding:5%;
 }
 
 .flexBox img{
-    width:200px;
+    width:100px;
 }

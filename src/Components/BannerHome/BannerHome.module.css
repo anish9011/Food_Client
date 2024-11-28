@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 2% 10%;
+    margin-right: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading h1{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4%; /* Reduced gap for better spacing */
+}
+
+.flexbox h1 {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.flexbox h2 {
+    border: 1px solid #FC8A06;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    border-radius: 100px;
+    padding: 15px 20px; /* Reduced padding for better fit */
+    line-height: 1.2em; /* Adjusted line height */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.flexContents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.flexContents img{
+    width: 250px;
+}
+
+.content{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.content h1{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+.imageFlex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imageFlex img{
+    width:120px;
+}
+
+.innerbody {
+    background-color: #F5F5F5;
+    margin-top:-6%;
+    padding: 8% 0 5% 8%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.innerbody h1{
+    text-align: left;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 27px;
+    line-height: 1.2; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.innerbody p{
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: left;
+    color: #FC8A06;
+    padding: 2%;
+    margin-left: -2%;
+    margin-top: -5%;
+}

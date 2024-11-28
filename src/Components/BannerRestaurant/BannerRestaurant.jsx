@@ -1,5 +1,8 @@
 import React from 'react';
 import Styles from './BannerRestaurant.module.css';
+import Tracking from '../../Assets/Tracking.svg';
+import IDVerified from '../../Assets/ID Verified.svg';
+import clock from '../../Assets/Clock.svg';
 
 export default function BannerRestaurant() {
   return (
@@ -8,7 +11,7 @@ export default function BannerRestaurant() {
         <div className={Styles.bannerOne}>
           <div className={Styles.deliveryInfo}>
             <div className={Styles.infoHeader}>
-              <img src="Tracking.svg" alt="Tracking Information" className={Styles.infoImage} />
+              <img src={Tracking} alt="Tracking Information" className={Styles.infoImage} />
               <h1 className={Styles.infoTitle}>Delivery Information</h1>
             </div>
             <div className={Styles.deliverySchedule}>
@@ -24,7 +27,7 @@ export default function BannerRestaurant() {
           </div>
           <div className={Styles.deliveryInfo}>
             <div className={Styles.infoHeader}>
-              <img src="ID Verified.svg" alt="Tracking Information" className={Styles.infoImage} />
+              <img src={IDVerified} alt="Tracking Information" className={Styles.infoImage} />
               <h1 className={Styles.infoTitle}>Contact information</h1>
             </div>
             <div className={Styles.deliverySchedule}>
@@ -39,7 +42,7 @@ export default function BannerRestaurant() {
           <div className={Styles.operation}>
             <div className={Styles.time}>
                 <div>
-            <img src="clock.svg" alt="clock_image"/></div>
+            <img src={clock} alt="clock_image"/></div>
             <h1>Operational Times</h1>
             </div>
             <div className={Styles.operationTime}>
