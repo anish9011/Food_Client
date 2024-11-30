@@ -18,6 +18,10 @@ export default function HomeHeader() {
         }
     };
 
+const handleProfile = ()=>{
+    navigate('/profilepage');
+}
+
     return (
     <>
         <div className={Styles.mainHeader}>
@@ -35,7 +39,7 @@ export default function HomeHeader() {
                     </h1>
                 ))}
             </div>
-            <div className={Styles.profile}>
+            <div className={Styles.profile} onClick={handleProfile}>
                 <img src="male.svg" alt="male_logo" />
                 <h1>Hey Mike</h1>
             </div>

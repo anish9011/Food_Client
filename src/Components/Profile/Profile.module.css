@@ -1,0 +1,216 @@
+.arrowbanner {
+    margin-left: 9%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    width: 30%;
+  }
+  
+  .arrowbanner h1 {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: left;
+    margin-right: 10px;
+  }
+  
+  .Container{
+    padding: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start; /* Distribute space, push the last item to the end */
+    align-items: center;
+    width: 100%;
+    gap:20px;
+}
+
+
+.profile h1 {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+}
+
+.profile button {
+    background-color: #FC8A06;
+    font-family: Poppins;
+    font-size: 14.98px;
+    font-weight: 400;
+    line-height: 22.47px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 10%; /* Adjust width of the button based on content */
+    text-align: center;
+    color: white;
+    margin-left:auto;
+}
+
+.outerDiv{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.innerDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, auto);
+  gap: 20px; 
+  padding:20px;
+  border-bottom: 1px solid #000000;
+}
+
+.content h1{
+  font-family: Poppins;
+  font-size: 14.98px;
+  font-weight: 400;
+  line-height: 22.47px;
+  text-align: left;
+}
+
+.content input{
+  background-color: #F9F9F9;
+  border: none;
+}
+
+.payment{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.innerPay{
+  margin-top: 2%;
+}
+
+.innerPay h1{
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+}
+
+.debitDiv {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between; /* Ensures items are spaced out */
+  width: 70%; /* Adjust the width for mobile responsiveness */
+  max-width: 350px; /* Maximum width for each card item */
+  gap: 20px;
+  border: 0.5px solid #00000080;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 3%;
+}
+
+.debit {
+  flex: 0 0 auto; /* Ensures the image doesn't stretch */
+}
+
+.text {
+  flex-grow: 1; /* Allow text area to expand */
+}
+
+.edit {
+  flex-shrink: 0; /* Prevent edit button from shrinking */
+  margin-right: 50px;
+}
+.text h1{
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+
+.text h2{
+  font-family: Poppins;
+  font-size: 14.98px;
+  font-weight: 400;
+  line-height: 22.47px;
+  text-align: left;
+}
+
+
+.mainDiv {
+  display: flex;
+  flex-wrap: wrap; /* To ensure items wrap to the next line if necessary */
+  gap: 20px; /* Optional: Adjusts the space between items */
+  justify-content: flex-start; /* Adjust the space distribution */
+}
+
+
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* For dimming background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inputField {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.saveButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.closeButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #e53935;
+}

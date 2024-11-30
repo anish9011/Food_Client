@@ -25,7 +25,7 @@ export default function SignIn() {
 
         toast.success(response.data.message);
         formik.resetForm();
-        navigate('/productpage');
+        navigate('/homepage');
       } catch (err) {
         if (err.response) {
           toast.error(err.response.data.message);

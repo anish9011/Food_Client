@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 2% 12%;
+}
+
+.mainImage {
+    height: 100px;
+    width: 100%;
+}
+
+.mainImage img {
+    height: 30px;
+    position: absolute;
+    top: -6%; 
+    left: -60%;
+}
+.mainImage{
+    position: absolute;
+    top:30%;
+    left:60%;
+}
+
+
+.title {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    flex-grow: 1; 
+    align-items: center;
+    margin-left: 10%;
+}
+
+.title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    margin: 0;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.title h1:hover {
+    color: #FC8A06;
+}
+
+.title h1.active {
+    color: white;
+    background-color: #FC8A06;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #03081F;
+    border-radius: 35px;
+    padding: 5px 10px;
+}
+
+.profile img {
+    height: 30px;
+}
+
+.profile h1 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}

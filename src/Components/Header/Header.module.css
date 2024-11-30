@@ -546,15 +546,71 @@ html, body {
     color:white;
 }
 
-.price{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:40px;
-    gap:20px;
+.price {
+    display: flex;
+    justify-content: space-between;  /* Space between the elements */
+    align-items: center;             /* Vertically align items */
+    padding: 20px 40px;              /* Add padding around the container */
+    gap: 20px;                       /* Space between items */
     background-color: #F9F9F9;
     border: 1px solid #00000033;
+  }
+  
+  .price >h1 {
+    font-family: Poppins, sans-serif; /* Added fallback font */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center; /* Center the text horizontally */
+    color: white;
+    font-weight: normal;
+    margin: 0;
+    background-color: #FC8A06; /* Background color */
+    border-radius: 50%; /* Makes it a perfect circle */
+    color: white;
+    width: 70px; /* Equal width */
+    height: 55px; /* Equal height */
+    margin: 0 auto; /* Center the circle horizontally (optional) */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    padding: 5px;
+  }
+  
+  .price h2 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;  /* Space between name and price */
+    flex-grow: 1;                    /* Occupy remaining space for proper alignment */
+    column-gap: 20px;
+    margin-left: 20px;
+  }
+  
+  .delBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .delBtn img {
+    width: 40px;
+    height: 30px;
+    margin-left: 10px;  /* Space between the price and remove button */
+    margin-top: 10px;
 }
+  
 
 .price > h1 {
     font-family: Poppins, sans-serif; /* Added fallback font */
@@ -563,14 +619,20 @@ html, body {
     line-height: 36px;
     text-align: center; /* Center the text horizontally */
     color: white;
-    width: 50px; /* Equal width */
-    height: 50px; /* Equal height */
+    width: 75px; /* Equal width */
+    height: 55px; /* Equal height */
     display: flex; /* Flexbox for centering */
     align-items: center; /* Vertical centering */
     justify-content: center; /* Horizontal centering */
-    background-color: #FC8A06; /* Background color */
-    border-radius: 50%; /* Makes it a perfect circle */
     margin: 0 auto; /* Center the circle horizontally (optional) */
+}
+
+.price > h2{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
 }
 
 
